@@ -37,16 +37,20 @@ $(document).ready(function() {
         const text = tweet.content.text;
         const timePosted = tweet.created_at;
         const timePast = moment(timePosted).toNow(true);
-        let $tweet = `<article>
-                <div >
+        let $tweet = `<article class="tweet-article">
+              <div class="top-article">
+                <div class="icon-name">
                   <i class = '${avatars}' > </i>
                   <p> ${name} </p>
+                </div>
+                <div class="handle">
                   <p> ${handle} </p>
                 </div>
-              <header >
+              </div>
+              <header class = "header-article">
                 <h5> ${text} </h5>
               </header>
-              <footer >
+              <footer class = "footer-article">
                 <div >
                   <p> ${timePast} </p>
                   <i class="fas fa-retweet"></i>
@@ -67,11 +71,12 @@ $(document).ready(function() {
         }
     };
 
-    renderTweets(tweetData);
+    //Preventing Default Behaviour of the Form
+    $("form").submit(function(event) {
+        event.preventDefault();
+        $.ajax({ type: "POST", url: "/tweets", data: $(this).serialize() })
+            .then(console.log("It works!"));
+    });
 
-    // //Preventing Default Behaviour of the Form
-    // $("form").submit(function(evt) {
-    //     evt.preventDefault();
-    //     $.ajax({ type: "POST", data: url: "/tweets" });
-    // });
+    renderTweets(tweetData);
 });
