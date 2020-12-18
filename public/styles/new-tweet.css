@@ -3,6 +3,32 @@ section.new-tweet {
     width: 100%;
 }
 
+#error1,
+#error2 {
+    border: solid rgb(180, 10, 10);
+    display: flex;
+    justify-content: left;
+    box-shadow: 5px 5px 10px red;
+    padding: 5px;
+    color: red;
+    font-weight: 24px;
+    display: none
+}
+
+#error1,
+#error2:active {
+    display: none;
+}
+
+#to-the-top {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#to-the-top:hover {
+    font-weight: bolder;
+}
+
 .counter {
     display: flex;
     align-items: flex-end;
@@ -19,17 +45,25 @@ button {
     color: aliceblue;
     background-color: #4056a1;
     font-family: Bungee, sans-serif;
-    margin-top: 2px;
+    margin-top: 15px;
+    border-radius: 7px;
+}
+
+button:hover {
+    font-weight: bolder;
 }
 
 #tweet-text {
     background-color: #f4f1ec;
     background-image: url(https://www.transparenttextures.com/patterns/concrete-wall.png);
     border: none;
-    line-height: 2vh;
+    width: 100%;
+    line-height: 20px;
     width: 90%;
     outline: none;
     resize: none;
+    margin-top: 25px;
+    margin-bottom: -5px;
 }
 
 
@@ -39,20 +73,25 @@ article.tweet-article {
     display: flex;
     border: solid #545149 3px;
     border-radius: 15px;
-    width: 100%;
     height: fit-content;
     padding: 30px;
-    margin: 60px 0px;
+    margin-right: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     justify-content: space-between;
     flex-direction: column;
-    /* align-items: flex-start; */
+}
+
+article.tweet-article:hover {
+    box-shadow: 8px 8px 15px 5px rgba(64,86,161,0.7);
+    display: flex;
 }
 
 article div {
     display: flex;
 }
 
-.top-article {
+header.top-article {
     display: flex;
     justify-content: space-between;
 }
@@ -62,17 +101,43 @@ article div {
     margin: 20px;
 }
 
-article.tweet-article:hover {
-    box-shadow: 10px 10px 5px #4056a1;
-    font-weight: bolder;
-}
-
-header.header-article {
+body.body-article {
     height: fit-content;
 }
 
-footer.footer-article div {
+article h5 {
+    margin: 5px;
+    overflow-wrap: break-word;
+    word-break: break-all
+}
+
+footer.footer-article {
     display: flex;
-    justify-content: space-between;
     border-top: solid 3px;
+    justify-content: space-between;
+}
+
+.time {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.share-icons {
+    display: flex;
+    justify-content: right;
+    height: fit-content;
+    margin: 23px;
+    display: none;
+}
+
+.tweet-article:hover footer > .share-icons {
+    display: flex;
+}
+
+i {
+    margin: 5px;
+}
+
+i:hover {
+    font-weight: bolder;
 }
