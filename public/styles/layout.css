@@ -33,7 +33,7 @@ body {
  */
 
 body {
-    padding-top: 100px;
+    padding-top: 130px;
 }
 
 .container {
@@ -47,4 +47,45 @@ body {
 
 form {
     width: 100%;
+    padding-right: 30px;
+}
+
+/*                                          @MEDIA QUERY                            */
+@media (min-width:806px) {
+nav {
+    height: 115px;
+    background-color: #4056a1;
+}
+
+header.top-header {
+    width: 30%;
+    float: left;
+    margin: 6%;
+}
+
+article.tweet-article {
+    display: flex;
+    flex-wrap: wrap;
+}
+}
+
+@media (max-width:805px) {
+nav {
+    height: 130px;
+    background-color: #f0c682;
+    background-image: url(https://www.transparenttextures.com/patterns/concrete-wall.png);
+}
+
+header.top-header {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-direction: column;
+    }
+
+html {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 }
