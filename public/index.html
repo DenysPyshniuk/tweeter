@@ -29,34 +29,36 @@
 <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-        <span>Tweeter</span>
+        <span> <a id="to-the-top" href="#">Tweeter</a></span>
+        <div>
+            <span> <a id="to-the-top" href="#">Write a new tweet</a></span>
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </div>
     </nav>
-    <header>
+    <header class="top-header">
         <div>
             <img src="/images/profile-hex.png" />
         </div>
         <br />
         <div>
-            <h2 class="profile-name">Your Name</h2>
+            <h2 class="profile-name">Stranger Name</h2>
         </div>
     </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
             <!-- <h2>Compose Tweet</h2> -->
             <form method="POST" action="/tweets/">
-                <label for="tweet-text">What are you humming about?</label>
-                <textarea name="text" id="tweet-text"></textarea>
+                <label for="tweet-text" id="error1">! Tweet is empty !</label>
+                <label for="tweet-text" id="error2">! Type less then <b>140</b> characters !</label>
+                <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
                 <div class="tweet">
                     <button type="submit">Tweet</button>
                     <output name="counter" class="counter" for="tweet-text">140</output>
                 </div>
             </form>
         </section>
-        <section id="tweets-container" class="posted-tweets">
-            <article></article>
-        </section>
+        <section id="tweets-container" class="posted-tweets"></section>
     </main>
 </body>
 
