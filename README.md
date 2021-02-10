@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Twitter simplified clone. Have been using technologies like HTML, CSS, JS, jQuery and AJAX for front-end, and Node, Express and MongoDB for back-end.
 
 !["Top of the page"](https://github.com/DenysPyshniuk/tweeter/blob/master/public/images/home.png?raw=true)
 !["Top of the mobile page"](https://github.com/DenysPyshniuk/tweeter/blob/master/public/images/homeMobile.png?raw=true)
